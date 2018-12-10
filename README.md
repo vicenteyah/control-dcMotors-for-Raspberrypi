@@ -1,3 +1,10 @@
-#Notes
-1. to execute this script just type  the following command in the terminal in your Raspberry Pi
-2. $python3 carControl.py
+## How it works?
+1. This script was made to control dc motors and servo motors
+2. for Raspberry pi (pi-robot)
+3. to execute the python script you must type the following command in your raspberry pi terminal
+## Run Script
+```bash
+$ python3 carControl.py
+```
+
+
