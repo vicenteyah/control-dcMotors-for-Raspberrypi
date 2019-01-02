@@ -4,7 +4,7 @@
 3. to execute the python script you must type the following command in your raspberry pi terminal
 ## Run Script
 ```bash
-$ python3 carControl.py
+$ python3 main.py
 ```
 
 
