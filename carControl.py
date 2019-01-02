@@ -96,52 +96,40 @@ def turnLeft():
 
 
 def Control():
-    try:
-        while True:
-            char = screen.getch()
-            if char == ord('q'):
-                break
-            elif char == curses.KEY_UP:
-               forward()
+    while True:
+        char = screen.getch()
+        if char == ord('q'):
+            break
+        elif char == curses.KEY_UP:
+            forward()
 
-            elif char == curses.KEY_DOWN:
-                backward()
+        elif char == curses.KEY_DOWN:
+            backward()
 
-            elif char == curses.KEY_RIGHT:
-                turnLeft()
+        elif char == curses.KEY_RIGHT:
+            turnLeft()
 
-            elif char == curses.KEY_LEFT:
-                turnRight()
+        elif char == curses.KEY_LEFT:
+            turnRight()
 
-            elif char == ord('w'):
-                _servoup_()
+        elif char == ord('w'):
+            _servoup_()
 
-            elif char == ord('s'):
-                _servodown_()
+        elif char == ord('s'):
+            _servodown_()
 
-            elif char == ord('d'):
-                _servoleft_()
+        elif char == ord('d'):
+            _servoleft_()
 
-            elif char == ord('a'):
-                _servoright_()
+        elif char == ord('a'):
+            _servoright_()
 
-            elif char == ord('-'):
-                GPIO.output(16, False)
-                GPIO.output(18, False)
-                GPIO.output(22, False)
-                GPIO.output(33, False)
-                GPIO.output(35, False)
-                GPIO.output(37, False)
-    finally:
-        curses.nocbreak()
-        screen.keypad(0)
-        curses.echo()
-        curses.endwin()
-        GPIO.cleanup()
-        p.stop()
-        p2.stop()
+        elif char == ord('-'):
+            GPIO.output(16, False)
+            GPIO.output(18, False)
+            GPIO.output(22, False)
+            GPIO.output(33, False)
+            GPIO.output(35, False)
+            GPIO.output(37, False)
 
 
-if __name__ == '__main__':
-
-    Control()
